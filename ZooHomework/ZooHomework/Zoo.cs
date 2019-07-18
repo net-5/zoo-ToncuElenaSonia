@@ -8,7 +8,6 @@ namespace Zoo
     {
         private string zooName;
         private List<Animal> listAnimals = new List<Animal>();
-        private List<Animal> listTransfers = new List<Animal>();
         
         public string ZooName { get { return zooName; } set { zooName = value; } }
         public List<Animal> ListAnimals { get { return listAnimals; } set { listAnimals = value; } }   
