@@ -42,22 +42,15 @@ namespace Zoo
             newZoo.InfoZoo();
             //List of animals from zoo Chisinau
             newZoo1.InfoZoo();
-            //proposed for transfer from Sibiu zoo
-            newZoo.ProposedToTransfer(newLion);
-            newZoo.ProposedToTransfer(newBear);
-            newZoo.ProposedToTransfer(newMonkey);
-            //display info transfer 
-            newZoo.TransferInfo();
-            //make the transfer
-            newZoo.PerformTransfer(newLion,newZoo1);
-            newZoo.PerformTransfer(newBear, newZoo1);
-            newZoo.PerformTransfer(newMonkey, newZoo1);
+            //transfer from Sibiu zoo
+            newZoo.Transfer(newLion, newZoo1);
+            newZoo.Transfer(newBear, newZoo1);
+            newZoo.Transfer(newMonkey, newZoo1);
+            Console.WriteLine("--------------------------------------------------------------------------------");
             newZoo.InfoZoo();
-            //proposed for transfer from Chisinau zoo
-            newZoo1.ProposedToTransfer(newWolf);
-            newZoo1.TransferInfo();
-            newZoo1.PerformTransfer(newWolf, newZoo);
-            newZoo1.InfoZoo();    
+            //transfer from Chisinau zoo
+            newZoo1.Transfer(newWolf, newZoo);
+            newZoo1.InfoZoo();
             //daily fed animals
             newZoo.FeedAnimal();
             Console.WriteLine("--------------------------------------------------------------------------------");
@@ -66,8 +59,10 @@ namespace Zoo
             newBear.Eat();
             newBear1.Eat();
             newGiraffe.Eat();
-            newLion.Eat();
-            newMonkey.Eat();
+            newLion.Eat(12);
+            newMonkey.Eat(TypeOfFood.Cookies, 5);
+            newMonkey2.Eat(TypeOfFood.Cookies, 2);
+            newWolf.Eat(TypeOfFood.Bones);
             Console.WriteLine("--------------------------------------------------------------------------------");
             //not all animals of the same type prefer the same type of food
             Console.WriteLine("\nNot all animals of the same type prefer the same type of food:");
@@ -75,6 +70,10 @@ namespace Zoo
             newBear1.Eat();
             newMonkey.Eat();
             newMonkey1.Eat();
+            newMonkey2.Eat();
+
+
+
 
 
 

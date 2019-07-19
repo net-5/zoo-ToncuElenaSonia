@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Zoo
 {
-    public enum TypeOfFood { Meat, Leaf, Apple, Honey, Banana, Carrot, Nuts }
-    public enum StateOfAnimal { InZoo, ProposedToTransfer}
+    public enum TypeOfFood { Meat, Leaf, Apple, Honey, Banana, Carrot, Nuts, Cookies, Bones }
+    public enum StateOfAnimal { InZoo, Transferred }
     public abstract class Animal
     {
         private string nameAnimal;

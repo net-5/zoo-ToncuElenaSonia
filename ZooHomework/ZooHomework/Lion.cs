@@ -10,5 +10,10 @@ namespace Zoo
         {
             
         }
+        public void Eat(int quantity)
+        {
+            Console.WriteLine($"The {NameAnimal} likes to eat {quantity} kilo per day of its {TypeOfFood} favourite food");
+        }
+
     }
 }
